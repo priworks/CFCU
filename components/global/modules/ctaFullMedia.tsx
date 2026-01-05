@@ -16,6 +16,7 @@ import { gsap } from 'gsap'
 import { useInView } from 'react-intersection-observer'
 import { urlForImage } from '@/lib/sanity.image'
 import Image from 'next/image'
+import FormattedTextField from 'components/interaction/formattedTextField'
 
 interface Props {
   data: CtaFullMediaType
@@ -101,7 +102,7 @@ const CtaFullMedia = ({ data, moduleIndex, modulesLength }: Props) => {
                 )}
                 style={{ color: theme.background }}
               >
-                {data?.topContent?.title?.text}
+                <FormattedTextField text={data?.topContent?.title?.text} />
               </h2>
             )}
             {data?.topContent?.subtitle && (
@@ -111,7 +112,7 @@ const CtaFullMedia = ({ data, moduleIndex, modulesLength }: Props) => {
                   'lg:max-w-[389px]',
                 )}
               >
-                {data?.topContent?.subtitle}
+                <FormattedTextField text={data?.topContent?.subtitle} />
               </p>
             )}
           </div>
@@ -130,7 +131,7 @@ const CtaFullMedia = ({ data, moduleIndex, modulesLength }: Props) => {
                 'lg:max-w-[408px] lg:title-s-desktop animateContent',
               )}
             >
-              {data.lowerContent?.title}
+              <FormattedTextField text={data.lowerContent?.title} />
             </h3>
             {data.lowerContent?.description && (
               <div

@@ -9,6 +9,7 @@ import { useClickToCopy } from 'hooks/useClickToCopy'
 import { useRef } from 'react'
 import Link from 'next/link'
 import { externalOnClick } from 'utils'
+import FormattedTextField from 'components/interaction/formattedTextField'
 const Footer = () => {
   const data = useGlobalSettingsStore((state) => state.globalSettings?.footer)
   const { isCopied, handleCopy } = useClickToCopy(
@@ -96,7 +97,9 @@ const Footer = () => {
                     'lg:hover:opacity-60 transition-opacity duration-150',
                   )}
                 >
-                  <span>{link.title}</span>
+                  <span>
+                    <FormattedTextField text={link.title} />
+                  </span>
                 </PageLink>
               ))}
             </div>
@@ -124,7 +127,9 @@ const Footer = () => {
                     'lg:hover:opacity-60 transition-opacity duration-150',
                   )}
                 >
-                  <span>{link.title}</span>
+                  <span>
+                    <FormattedTextField text={link.title} />
+                  </span>
                 </PageLink>
               ))}
             </div>
@@ -214,7 +219,7 @@ const Footer = () => {
               'lg:mt-[0px]',
             )}
           >
-            {data?.lowerFooterMessage}
+            <FormattedTextField text={data?.lowerFooterMessage} />
           </p>
         </div>
       </footer>

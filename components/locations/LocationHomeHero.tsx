@@ -10,6 +10,7 @@ import { useIsomorphicLayoutEffect } from '@/hooks/useIsomorphicLayoutEffect'
 import { useRef } from 'react'
 import { useWindowSize } from '@/hooks/useWindowSize'
 import SplitTextDynamic from 'components/interaction/splitTextDynamic'
+import FormattedTextField from 'components/interaction/formattedTextField'
 
 const LocationHomeHero = ({
   data,
@@ -127,7 +128,7 @@ const LocationHomeHero = ({
               'lg:text-[26px] lg:leading-[33.8px]',
             )}
           >
-            {data?.subtitle}
+            <FormattedTextField text={data?.subtitle} />
           </p>
         </article>
       </div>

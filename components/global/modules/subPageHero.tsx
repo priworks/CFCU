@@ -11,6 +11,7 @@ import { stegaClean } from '@sanity/client/stega'
 import PlayPause from 'components/global/ui/PlayPause'
 import { useWindowSize } from '@/hooks/useWindowSize'
 import { SubPageType } from '@/types/sanity'
+import FormattedTextField from 'components/interaction/formattedTextField'
 
 const SubPageHero = ({
   data,
@@ -183,7 +184,7 @@ const SubPageHero = ({
                 'lg:text-[26px] lg:leading-[33.8px]',
               )}
             >
-              {data?.subtitle}
+              <FormattedTextField text={data?.subtitle} />
             </p>
             {stegaClean(data?.backgroundMedia?.mediaType) === 'video' && (
               <button

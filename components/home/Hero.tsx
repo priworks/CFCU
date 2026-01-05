@@ -13,6 +13,7 @@ import { useRef, useState } from 'react'
 import Link from 'next/link'
 import { stegaClean } from '@sanity/client/stega'
 import PlayPause from 'components/global/ui/PlayPause'
+import FormattedTextField from 'components/interaction/formattedTextField'
 
 const Hero = ({ data }: { data: HomepageType['hero'] }) => {
   const heroRef = useRef<HTMLDivElement>(null)
@@ -165,7 +166,8 @@ const Hero = ({ data }: { data: HomepageType['hero'] }) => {
             <PortableText value={data?.testimonial?.content} />
           </div>
           <h6 className={clsx('font-codec-heavy text-[16px] leading-[24px]')}>
-            – {data?.testimonial?.author}, {data?.testimonial?.title}
+            – {data?.testimonial?.author},{' '}
+            <FormattedTextField text={data?.testimonial?.title} />
           </h6>
         </article>
       </div>
