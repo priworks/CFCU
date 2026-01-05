@@ -348,6 +348,11 @@ export default defineType({
                       return true
                     }),
                 },
+                {
+                  name: 'link',
+                  type: 'pageLink',
+                  title: 'Link',
+                },
               ],
               preview: {
                 select: {
@@ -366,9 +371,15 @@ export default defineType({
         }),
         defineField({
           name: 'lowerFooterMessage',
-          title: 'Lower Footer Message',
+          title: 'Lower Footer Message (deprecated)',
           type: 'text',
           rows: 2,
+          validation: (Rule: any) => Rule.required(),
+        }),
+        defineField({
+          name: 'lowerFooterContent',
+          title: 'Lower Footer Message',
+          type: 'blockContentMin',
           validation: (Rule: any) => Rule.required(),
         }),
       ],

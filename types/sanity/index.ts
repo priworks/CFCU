@@ -405,8 +405,9 @@ export interface GlobalSettingsType {
     routingNumber: string
     lowerFooterIcons: Array<{
       icon: ImageAsset
+      link?: PageLinkType
     }>
-    lowerFooterMessage: string
+    lowerFooterContent: PortableTextBlock
   }
   quickExit: {
     showFastExit?: boolean
