@@ -160,9 +160,7 @@ export interface PageLinkType {
     _id: string
     _type: string
     title: string
-    slug: {
-      current: string
-    }
+    slug: string
   }
   externalLink?: {
     _id: string

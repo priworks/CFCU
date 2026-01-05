@@ -222,6 +222,20 @@ export const locationSlugsQuery = groq`
 export const locationsQuery = groq`
 *[_type == "location"] | order(orderRank){
   ...,
+  appointmentLink{
+    ...,
+    link->{
+      _id,
+      _type,
+      title,
+      "slug": slug.current
+    },
+    externalLink->{
+      _id,
+      _type,
+      externalLink,
+    }
+  },
   ${modulesFragment}
 }`
 
