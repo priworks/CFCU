@@ -29,8 +29,14 @@ const CtaTopicRow = ({ data }: { data: CtaTopicRowType }) => {
     if (!inView) return
     const ctx = gsap.context(() => {
       const q = gsap.utils.selector(containerRef.current)
-      const tl = gsap.timeline().fromTo(
-        q('.elementAnimation'),
+      const elements = q('.elementAnimation')
+
+      if (!elements?.length) {
+        return
+      }
+
+      gsap.timeline().fromTo(
+        elements,
         { opacity: 0, y: 20 },
         {
           opacity: 1,
