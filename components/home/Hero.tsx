@@ -76,6 +76,7 @@ const Hero = ({ data }: { data: HomepageType['hero'] }) => {
             'w-[212px] leading-[47px] absolute top-[24px] left-[25px] z-[8]',
             'lg:w-[244.71px] lg:leading-[54px] lg:left-[48px] lg:top-[48px]',
           )}
+          priority
         />
       </Link>
       <div
