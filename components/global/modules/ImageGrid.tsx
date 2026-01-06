@@ -86,14 +86,14 @@ const ImageGrid = ({ data }: { data: LogoGridType }) => {
                       href={logo?.link}
                       onClick={(e) => externalOnClick(e, logo?.link)}
                       className={clsx('lg:block w-full')}
-                      key={(String(index) + logo?.logo?.alt) as string}
+                      key={(String(index) + (logo?.logo?.alt || '')) as string}
                     >
                       <Image
                         src={urlForImage(logo?.logo)
                           .width(1200)
                           .quality(100)
                           .url()}
-                        alt={logo?.logo.alt as string}
+                        alt={(logo?.logo.alt as string) || ''}
                         width={1000}
                         height={1000}
                         quality={100}
@@ -109,12 +109,12 @@ const ImageGrid = ({ data }: { data: LogoGridType }) => {
                     </a>
                   ) : (
                     <Image
-                      key={(String(index) + logo?.logo?.alt) as string}
+                      key={(String(index) + (logo?.logo?.alt || '')) as string}
                       src={urlForImage(logo?.logo)
                         .width(12000)
                         .quality(100)
                         .url()}
-                      alt={logo?.logo.alt as string}
+                      alt={(logo?.logo.alt as string) || ''}
                       width={1000}
                       height={1000}
                       quality={100}
