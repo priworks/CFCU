@@ -3,17 +3,17 @@
  */
 
 import { definePlugin, type DocumentDefinition } from 'sanity'
-import { type StructureResolver } from 'sanity/desk'
+import { type StructureResolver } from 'sanity/structure'
 import { iframeOptions } from './previewPane'
 import { Iframe } from 'sanity-plugin-iframe-pane'
-import globalSettings from 'schemas/singletons/globalSettings'
-import homepage from 'schemas/singletons/homepage'
-import testModules from 'schemas/singletons/testModules'
-import { Browser, Folder } from '@phosphor-icons/react/dist/ssr'
-import fourOhFour from 'schemas/singletons/404'
+import globalSettings from '@/schemas/singletons/globalSettings'
+import homepage from '@/schemas/singletons/homepage'
+import testModules from '@/schemas/singletons/testModules'
+import { BrowserIcon, FolderIcon } from '@phosphor-icons/react/dist/ssr'
+import fourOhFour from '@/schemas/singletons/404'
 import { orderableDocumentListDeskItem } from '@sanity/orderable-document-list'
 import { PageHierarchyView } from '@/components/Sanity/PageHierarchyView'
-import { TreeView } from '@phosphor-icons/react'
+import { TreeViewIcon } from '@phosphor-icons/react'
 import redirects from '@/schemas/singletons/redirects'
 import { CustomDocumentView } from '@/plugins/subpageOrder'
 export const settingsPlugin = definePlugin<{ type: string }>(({ type }) => {
@@ -154,7 +154,7 @@ export const settingsStructure = (
           .items([
             S.listItem()
               .title('Blog home page')
-              .icon(Browser)
+              .icon(BrowserIcon)
               .child(
                 S.document()
                   .schemaType('blogHomePage')
@@ -186,7 +186,7 @@ export const settingsStructure = (
           .items([
             S.listItem()
               .title('Location home page')
-              .icon(Browser)
+              .icon(BrowserIcon)
               .child(
                 S.document()
                   .schemaType('locationHomePage')
@@ -213,7 +213,7 @@ export const settingsStructure = (
       )
     const subpagesListItem = S.listItem()
       .title('Subpages')
-      .icon(Folder)
+      .icon(FolderIcon)
       .schemaType('subPage')
       .child(
         S.list()
@@ -242,7 +242,7 @@ export const settingsStructure = (
               ),
             S.listItem()
               .title('Page Hierarchy')
-              .icon(TreeView)
+              .icon(TreeViewIcon)
               .child(S.component(PageHierarchyView).title('Page Hierarchy')),
           ]),
       )

@@ -1,5 +1,5 @@
 import React from 'react'
-import { LocationPage } from 'types/sanity'
+import { LocationPage } from '@/types/sanity'
 import { clsx } from 'clsx'
 
 const LocationHours = ({ data }: { data: LocationPage['hours'] }) => {

@@ -3,12 +3,12 @@ import {
   PostPageType,
   TopicPageType,
   TopicWithRelatedPosts,
-} from 'types/sanity'
+} from '@/types/sanity'
 import Image from 'next/image'
 import { clsx } from 'clsx'
 import { PortableText } from '@portabletext/react'
 import PostCard from '../global/ui/PostCard'
-import Pagination from 'components/posts/paginationPosts'
+import Pagination from '@/components/posts/paginationPosts'
 import Link from 'next/link'
 import FilterButton from '../global/ui/FilterButton'
 import { useState, useRef } from 'react'

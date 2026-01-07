@@ -4,8 +4,8 @@ import {
   projectId,
   studioUrl,
   useCdn,
-} from 'lib/sanity.api'
-import { ATMLocation, TopicPageType, PostPageType } from 'types/sanity'
+} from '@/lib/sanity.api'
+import { ATMLocation, TopicPageType, PostPageType } from '@/types/sanity'
 import {
   globalSettingsQuery,
   dynamicPageSlugsQuery,
@@ -30,7 +30,7 @@ import {
   fourOhFourQuery,
   allSubpagesQuery,
   allPostsWithouPagination,
-} from 'lib/sanity.queries'
+} from '@/lib/sanity.queries'
 import { createClient, type SanityClient } from 'next-sanity'
 
 import Papa from 'papaparse'

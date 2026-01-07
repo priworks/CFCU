@@ -1,17 +1,15 @@
-import { HomepageType } from 'types/sanity'
+import { HomepageType } from '@/types/sanity'
 import Image from 'next/image'
-import { urlForImage } from 'lib/sanity.image'
+import { urlForImage } from '@/lib/sanity.image'
 import { clsx } from 'clsx'
 import * as Accordion from '@radix-ui/react-accordion'
-import { getThemeClasses } from 'lib/themeConfig'
-import Link from 'next/link'
-import PageLink from 'components/global/ui/PageLink'
+import { getThemeClasses } from '@/lib/themeConfig'
+import PageLink from '@/components/global/ui/PageLink'
 import { stegaClean } from '@sanity/client/stega'
-import { motion, useTransform, useScroll } from 'framer-motion'
 import { useRef } from 'react'
-import { useIsomorphicLayoutEffect } from 'hooks/useIsomorphicLayoutEffect'
+import { useIsomorphicLayoutEffect } from '@/hooks/useIsomorphicLayoutEffect'
 import { gsap } from 'gsap'
-import { useWindowSize } from 'hooks/useWindowSize'
+import { useWindowSize } from '@/hooks/useWindowSize'
 
 const EmotionalNavigation = ({
   data,

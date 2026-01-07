@@ -1,7 +1,8 @@
+import type { NextConfig } from 'next'
 import { createClient } from 'next-sanity'
 
 /** @type {import('next').NextConfig} */
-const config = {
+const nextConfig: NextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
@@ -67,8 +68,8 @@ const config = {
         destination: '/posts/topic/:slug',
         permanent: true,
       },
-      ...sanitySortedRedirects || [],
+      ...(sanitySortedRedirects || []),
     ]
   },
 }
-export default config
+export default nextConfig

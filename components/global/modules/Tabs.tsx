@@ -1,15 +1,15 @@
-import { TabsType } from 'types/sanity'
+import { TabsType } from '@/types/sanity'
 import { clsx } from 'clsx'
 import { PortableText } from '@portabletext/react'
 import * as Accordion from '@radix-ui/react-accordion'
 import Image from 'next/image'
-import { urlForImage } from 'lib/sanity.image'
+import { urlForImage } from '@/lib/sanity.image'
 import { useState, useRef } from 'react'
 import { stegaClean } from '@sanity/client/stega'
 import {
   WysiwygComponentsWithoutPadding,
   WysiwygComopentsMin,
-} from 'lib/portabletTextComponents'
+} from '@/lib/portabletTextComponents'
 import { useIsomorphicLayoutEffect } from '@/hooks/useIsomorphicLayoutEffect'
 import { gsap } from 'gsap'
 import { useWindowSize } from '@/hooks/useWindowSize'

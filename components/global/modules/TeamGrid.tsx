@@ -1,4 +1,4 @@
-import { TeamGridType, GroupMember } from 'types/sanity'
+import { TeamGridType, GroupMember } from '@/types/sanity'
 import { PortableText } from '@portabletext/react'
 import { clsx } from 'clsx'
 import Image from 'next/image'

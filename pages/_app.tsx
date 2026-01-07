@@ -1,11 +1,11 @@
-import 'styles/global.css'
+import '@/styles/global.css'
 
 import { AppProps } from 'next/app'
-import { lazy, Suspense } from 'react'
+import { lazy } from 'react'
 import { clsx } from 'clsx'
-import { urlForImage } from 'lib/sanity.image'
+import { urlForImage } from '@/lib/sanity.image'
 import Image from 'next/image'
-import Header from 'components/global/Header'
+import Header from '@/components/global/Header'
 import { SplitText } from 'gsap/dist/SplitText'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { gsap } from 'gsap'
@@ -21,7 +21,7 @@ import {
   CodecRegular,
   CodecUltra,
   CodecLight,
-} from 'font'
+} from '@/font'
 import GlobalErrorBoundary from '@/components/global/GlobalErrorBoundary'
 export interface SharedPageProps {
   draftMode: boolean
@@ -49,7 +49,7 @@ export const myWysiwygComponentsWithoutPadding = {
   },
 }
 
-const PreviewProvider = lazy(() => import('components/PreviewProvider'))
+const PreviewProvider = lazy(() => import('@/components/PreviewProvider'))
 
 export default function App({
   Component,

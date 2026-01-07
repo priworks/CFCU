@@ -1,12 +1,12 @@
 import { useState, useEffect, use } from 'react'
-import { SearchResult } from 'types/sanity'
+import { SearchResult } from '@/types/sanity'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { clsx } from 'clsx'
 import Image from 'next/image'
 import defualtSubPageHero from 'public/images/defaultSubPage.png'
-import { useGlobalSettingsStore } from 'stores/globalSettingsStore'
-import { GlobalSettingsType } from 'types/sanity'
+import { useGlobalSettingsStore } from '@/stores/globalSettingsStore'
+import { GlobalSettingsType } from '@/types/sanity'
 
 const SearchResultsPage = ({
   initialQuery,

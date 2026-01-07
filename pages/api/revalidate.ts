@@ -1,4 +1,4 @@
-import { apiVersion, dataset, projectId } from 'lib/sanity.api'
+import { apiVersion, dataset, projectId } from '@/lib/sanity.api'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import {
   createClient,
@@ -7,7 +7,7 @@ import {
   type SanityDocument,
 } from 'next-sanity'
 import { parseBody, type ParsedBody } from 'next-sanity/webhook'
-export { config } from 'next-sanity/webhook'
+// export { config } from 'next-sanity/webhook'
 
 export default async function revalidate(
   req: NextApiRequest,

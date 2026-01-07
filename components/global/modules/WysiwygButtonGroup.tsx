@@ -1,10 +1,8 @@
-import React from 'react'
-import PageLink from 'components/global/ui/PageLink'
 import { clsx } from 'clsx'
-import Button from 'components/global/ui/Button'
+import Button from '@/components/global/ui/Button'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
-import { externalOnClick } from 'utils'
+import { externalOnClick } from '@/utils'
 interface Props {
   value: {
     links: Array<ButtonProps>

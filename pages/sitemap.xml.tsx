@@ -1,4 +1,4 @@
-import { getClient } from 'lib/sanity.client'
+import { getClient } from '@/lib/sanity.client'
 import { groq, SanityClient } from 'next-sanity'
 
 type SitemapLocation = {

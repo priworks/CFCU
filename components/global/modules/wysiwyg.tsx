@@ -1,7 +1,7 @@
-import { WysiwygType } from 'types/sanity'
+import { WysiwygType } from '@/types/sanity'
 import { clsx } from 'clsx'
 import { PortableText } from '@portabletext/react'
-import { WysiwygComponents } from 'lib/portabletTextComponents'
+import { WysiwygComponents } from '@/lib/portabletTextComponents'
 
 const Wysiwyg = ({ data }: { data: WysiwygType }) => {
   return (

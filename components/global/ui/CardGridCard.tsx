@@ -1,9 +1,9 @@
-import { CtaCardGridHomeType } from 'types/sanity'
+import { CtaCardGridHomeType } from '@/types/sanity'
 import { clsx } from 'clsx'
 import Image from 'next/image'
-import { urlForImage } from 'lib/sanity.image'
+import { urlForImage } from '@/lib/sanity.image'
 import { PortableText } from '@portabletext/react'
-import { WysiwygComponentsWithoutPadding } from 'lib/portabletTextComponents'
+import { WysiwygComponentsWithoutPadding } from '@/lib/portabletTextComponents'
 import CardLink from '../ui/CardLink'
 
 export default function CardGridCard({

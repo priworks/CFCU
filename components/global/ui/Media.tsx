@@ -2,9 +2,9 @@
 
 import Image from 'next/image'
 import { useState, useRef, useEffect } from 'react'
-import type { Media } from 'types/sanity'
-import { urlForImage } from 'lib/sanity.image'
-import { urlForFile } from 'lib/sanity.file'
+import type { Media } from '@/types/sanity'
+import { urlForImage } from '@/lib/sanity.image'
+import { urlForFile } from '@/lib/sanity.file'
 import { clsx } from 'clsx'
 import { stegaClean } from '@sanity/client/stega'
 import { SanityImage } from 'sanity-image'

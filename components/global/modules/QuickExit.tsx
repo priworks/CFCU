@@ -1,4 +1,4 @@
-import { QuickExitType } from 'types/sanity'
+import { QuickExitType } from '@/types/sanity'
 import { clsx } from 'clsx'
 import { use, useEffect, useRef } from 'react'
 import { useWindowSize } from '@/hooks/useWindowSize'

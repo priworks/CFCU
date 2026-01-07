@@ -1,11 +1,11 @@
-import { LogoGridType } from 'types/sanity'
+import { LogoGridType } from '@/types/sanity'
 import { PortableText } from '@portabletext/react'
 import { clsx } from 'clsx'
 import Image from 'next/image'
-import { urlForImage } from 'lib/sanity.image'
+import { urlForImage } from '@/lib/sanity.image'
 import { stegaClean } from '@sanity/client/stega'
 import { WysiwygComponentsWithoutPadding } from '@/lib/portabletTextComponents'
-import { externalOnClick } from 'utils'
+import { externalOnClick } from '@/utils'
 
 const ImageGrid = ({ data }: { data: LogoGridType }) => {
   return (

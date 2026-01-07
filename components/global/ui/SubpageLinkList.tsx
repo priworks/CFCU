@@ -1,7 +1,7 @@
-import { SubPageType } from 'types/sanity'
+import { SubPageType } from '@/types/sanity'
 import { clsx } from 'clsx'
 import Link from 'next/link'
-import { useWindowSize } from 'hooks/useWindowSize'
+import { useWindowSize } from '@/hooks/useWindowSize'
 import * as Accordion from '@radix-ui/react-accordion'
 
 const SubpageLinkList = ({ data }: { data: SubPageType[] }) => {

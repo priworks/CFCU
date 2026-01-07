@@ -5,9 +5,9 @@ import {
   getAllLocations,
   getAllSubpages,
   getAllPostsWithoutPagination,
-} from 'lib/sanity.client'
-import { parseBody, type ParsedBody } from 'next-sanity/webhook'
-export { config } from 'next-sanity/webhook'
+} from '@/lib/sanity.client'
+import { parseBody } from 'next-sanity/webhook'
+// export { config } from 'next-sanity/webhook'
 
 const algoliaAppId = process.env.NEXT_PUBLIC_ALGOLIA_APP_ID!
 const algoliaApiKey = process.env.ALGOLIA_API_KEY!

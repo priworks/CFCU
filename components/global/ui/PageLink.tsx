@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { PageLinkType } from 'types/sanity'
+import { PageLinkType } from '@/types/sanity'
 import Link from 'next/link'
 import { clsx } from 'clsx'
-import { set } from 'sanity'
-import { externalOnClick } from 'utils'
+import { externalOnClick } from '@/utils'
 const PageLink = ({
   data,
   className,
@@ -71,7 +70,13 @@ const PageLink = ({
       href={data?.externalLinkOneOff?.link}
       target={target}
       className={clsx(className, 'w-fit')}
-      onClick={(e) => externalOnClick(e, data?.externalLinkOneOff?.link, data?.externalLinkOneOff?.showPdfPageLeaveAlert)}
+      onClick={(e) =>
+        externalOnClick(
+          e,
+          data?.externalLinkOneOff?.link,
+          data?.externalLinkOneOff?.showPdfPageLeaveAlert,
+        )
+      }
     >
       {children}
     </a>
@@ -80,7 +85,13 @@ const PageLink = ({
       href={data?.externalLink?.externalLink}
       target={target}
       className={clsx(className, 'w-fit')}
-      onClick={(e) => externalOnClick(e, data?.externalLink?.externalLink, data?.externalLink?.showPdfPageLeaveAlert)}
+      onClick={(e) =>
+        externalOnClick(
+          e,
+          data?.externalLink?.externalLink,
+          data?.externalLink?.showPdfPageLeaveAlert,
+        )
+      }
     >
       {children}
     </a>

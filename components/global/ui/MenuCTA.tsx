@@ -1,8 +1,8 @@
 import { clsx } from 'clsx'
-import { getThemeClasses, Theme } from 'lib/themeConfig'
-import { GlobalSettingsType } from 'types/sanity'
+import { getThemeClasses, Theme } from '@/lib/themeConfig'
+import { GlobalSettingsType } from '@/types/sanity'
 import PageLink from './PageLink'
-import { useIsomorphicLayoutEffect } from 'hooks/useIsomorphicLayoutEffect'
+import { useIsomorphicLayoutEffect } from '@/hooks/useIsomorphicLayoutEffect'
 import { gsap } from 'gsap'
 import { useEffect, useState } from 'react'
 
